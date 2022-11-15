@@ -1,0 +1,111 @@
+Tbl_Cart{
+	CartID,
+	ProductDetailsID,
+	Quantity,
+	DiscountID,
+	UniqueNo,
+	
+	}
+Tbl_Dicount{
+	DiscountID,
+	DiscountTitle,
+	CouponCode,
+	DiscountDescription,
+	DiscountPercent,
+	StatusID,
+	CreatedBy_UserID,
+	UpdatedBy_UserID,
+	
+	}
+Tbl_ShippingFee{
+	ShippinfeeID,
+	CityID,
+	ShippingFee [float],
+	DeliveryTimeinDays,
+	StatusID,
+
+	}
+Tbl_OrderStatus{
+	OrderStatusID,
+	OrderStatusTitle,
+	StatusID,
+
+	}
+Tbl_PaymentType{
+	PaymentTypeID,
+	PaymentType
+	}
+
+Tbl_OrderHeader{
+	OrderHeaderID,
+	Customer_UserID,
+	ShippingFeeID,
+	UserAddressID,
+	TotalCost,
+	DiscountAmount,
+	TotalPayment,
+	OrderDate,
+	OrderTime,
+	ShippingDate,
+	OrderStatusID,
+	PaymentTypeID,
+	TransectionNo [varchar(150)] nullable,
+	TransectionDate nullable,
+	TransectionTime nullable,
+	PaymentReceiptSnapshort[varchar(500)] nullable,
+
+	}
+
+Tbl_BankAccount{
+	BankAccountID,
+	PaymentTypeID,
+	BankName,
+	Accounttitle,
+	AcountNo,
+	IBANNo,
+	StatusID,
+	CreatedBy_UserID,
+
+	}
+
+Tbl_OrderDetail{
+	OrderDetailsID,
+	OrderHeaderID,
+	ProductDetailID,
+	UnitPrice,
+	Quantity,
+	DiscountID,
+	}
+	
+Tbl_CustomerReviewImage{ //completed
+	CustomerReviewImageID,
+	CustomerReviewID,
+	ImagePath,
+	Status,
+	}
+Tbl_CustomerReview{
+	CustomerReviewID,
+	ProductHeader,
+	CustomerReview,
+	StatusID,
+	CustomerReviewUserID,
+	OrderHeader,
+	CustomerReviewImageID,
+
+	}
+
+Tbl_PaymentStatus{
+	PaymentStatusID,
+	PaymentStatus,
+
+	}	
+
+Tbl_OrderPayment{
+	OrderPaymentID,
+	OrderHeaderID,
+	TotalPayment [float],
+	PaymentGetways,
+	PaymentTypeID,
+	PaymentStatusID,
+	
+	}

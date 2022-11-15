@@ -1,0 +1,57 @@
+Tbl_UserType{
+	UserTypeID[int] primary key,
+	UserType[NvarChar(200)],
+	 }
+
+Tbl_UserCountry{
+	CountryID [int] primary key,
+	CountryTitle [NVarChar(250)]
+	}
+
+Tbl_UserCity{
+	CityID [int] primary key,
+	CountryID [int] forign key,
+	CityName [NVarChar(250)
+	}
+
+Tbl_UserGender{
+	GenderID [int] primary key,
+	GenderTitle [NVarChar(250)]
+	}
+
+Tbl_Status{
+	StatusID [int] primary key,
+	StatusTitle [VarChar(250)]
+	}
+Tbl_AddressType{
+	AddressID [int] primary key,
+	AddressType[VarChar(250)],
+	
+	}
+Tbl_AddressStatus{
+	StatusID,
+	StatusTitle (Visible, Non-Visible	)
+	}
+Tbl_Address{
+	UserAddressID,
+	UserID,
+	AddressTpyeID,
+	FullAddress,
+	CityID,
+	PostalCode,
+	ContactNo,
+	StatusID,
+	}
+
+Tbl_User{
+	UserID[int] primary key,
+	UserTypeID[int] forign key,
+	Username [VarChar(250)],
+	Password [VarChar(250)].
+	EmailAddress [VarChar(250)],
+	FirstName [NVarChar(250)],
+	LastName [NVarChar(250)],
+	ContactNo [VarChar(250)],
+	GenderID [int] forign key,
+	UserStatusID,
+	}

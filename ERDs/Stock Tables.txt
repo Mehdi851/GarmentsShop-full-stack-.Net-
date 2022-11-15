@@ -1,0 +1,138 @@
+Tbl_Main_Category{
+	Main_CategoryID,
+	Main_CategoryTitle,
+	CreatedBy_User,
+	CreatedDate,
+	CreatedTime,
+	StatusID,
+	}
+
+Tbl_Sub_Category{
+	Sub_CategoryID,
+	Main_CategoryID,
+	Sub_CategoryTitle,
+	CreatedBy_UserID,
+	CreatedDate,
+	CreatedTime,
+	StatusID
+	}
+
+Tbl_Unit{
+	UnitID,
+	UnitTitle {Unit, Cm,Kg}
+	}
+
+Tbl_Tag{
+	TagID,
+	TagTitle 
+	}
+
+Tbl_Type_Color{
+	ColorTypeID,
+	ColorTitle,
+	ColorCode,
+	StatusID
+	}
+
+Tbl_Brand{
+	BrandID,
+	BrandTitle,
+	BrandLogo,
+	BrandImage,
+	StatusID,	
+	}
+
+Tbl_ProductHeader{
+	ProductHeaderID,
+	Sub_CategoryID,
+	ProductTitle,
+	BrandID,
+	CreatedBy_UserID,
+	UpdatedBy_UserID,
+	ProductInformation[nvarchar(MAX)],
+	SKUCode,
+	
+	}
+
+Tbl_SizeType{
+	SizeTypeID,
+	SizeType,
+	}
+
+Tbl_SizeLevel{
+	SizeLevelID,
+	SizeLevel,
+	}
+
+Tbl_SizeTypeByLeve{
+	SizeTypeByLeveID,
+	SizeTypeID,
+	SizeLevelID,
+	SizeLevelValue,
+	StatusID,
+	GenderID,
+	
+	}
+
+Tbl_ProductDetails{
+	ProductDetailsID,
+	ProductHeaderID,
+	ColorType,
+	SizeTypeByLevelID,
+	UnitID,
+	Quantity,
+	UnitPrice,
+	BarCode[nvarchar],
+	StatusID
+	CreatedBy_UserID,
+	UpdateBy_UserID,
+		
+	}
+
+Tbl_ProductFeature{
+	ProductFeatureID,
+	ProductHeaderID,
+	ProductFeature [nvarchar(MAX)],
+	CreatedBy_UserID,
+	UpdatedBy_UserID,
+	StatusID,
+	}
+
+Tbl_ProductTag{
+	ProductTagID,
+	ProductHeaderID,
+	TagID,
+	StatusID
+	}
+
+Tbl_ProductCompare{
+	CompareID,
+	CompareUserID,
+	ProductDetailID,
+	}
+
+Tbl_WishList{
+	WishListID,
+	WishList_UserID,
+	ProductHeaderID,
+	AddDate,
+	}
+
+Tbl_Season{
+	SeasonID,
+	SeasonTitle,
+	SeasonStartDate,
+	SeasonEndDate,
+	CreatedBy_UserID,
+	
+	}
+Tbl_SeasonDiscount{
+	SeasonDiscountID,
+	ProductHeader,
+	Discount_Percent,
+	StatusID,
+	SeasonID,
+	}
+
+
+
